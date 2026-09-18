@@ -1,0 +1,123 @@
+{
+  "domains": {
+    "soil_health": {
+      "organic_carbon_pct": {
+        "critical_low": { "max": 0.6, "status": "Severe organic matter depletion", "hazard": "High risk of microbial collapse, compaction, and desertification", "source": "FAO World Soil Charter (2015); Batjes (2014)" },
+        "moderate": { "min": 0.6, "max": 1.5, "status": "Sub-optimal carbon reserves", "hazard": "Moderate water-holding capacity, nutrient leaching vulnerability", "source": "USDA NRCS Soil Quality Guidelines" },
+        "healthy": { "min": 1.5, "max": 3.5, "status": "Ecologically resilient", "hazard": "Optimal structural aggregation and mycorrhizal activity", "source": "FAO Soils Bulletin 80" },
+        "high": { "min": 3.5, "status": "Rich organic soils / peatland buffer", "hazard": "High carbon sequestration, preserve against tillage oxidation", "source": "IPCC Special Report on Climate Change and Land (2019)" }
+      },
+      "ph": {
+        "strong_acid": { "max": 5.5, "status": "Aluminium/Manganese toxicity, phosphorus fixation", "source": "USDA Soil Taxonomy" },
+        "optimal": { "min": 6.0, "max": 7.5, "status": "Peak nutrient bioavailability and microbial diversity", "source": "FAO World Soil Charter" },
+        "alkaline_calcareous": { "min": 8.0, "status": "Micronutrient chlorosis (Fe, Zn deficiency), low microbial respiration", "source": "USDA NRCS" }
+      },
+      "moisture_pct": {
+        "wilting_point": { "max": 12.0, "status": "Severe moisture stress for vegetation and macrofauna", "source": "FAO Irrigation and Drainage Paper 56" },
+        "field_capacity": { "min": 20.0, "max": 35.0, "status": "Optimum aerobic and biological activity", "source": "USDA NRCS" }
+      }
+    },
+    "land_use": {
+      "monoculture_wheat": {
+        "biodiversity_score": 0.15,
+        "habitat_fragmentation_risk": "Very High",
+        "pollinator_support": "Extremely Low (<5 visits/m²/hr)",
+        "soil_erosion_rate_t_ha_yr": 18.5,
+        "description": "Continuous single-species cereal cropping with bare fallow periods",
+        "source": "FAO State of the World's Biodiversity for Food and Agriculture (2019)"
+      },
+      "monoculture_corn_soy": {
+        "biodiversity_score": 0.18,
+        "habitat_fragmentation_risk": "High",
+        "pollinator_support": "Low during non-bloom, nil post-harvest",
+        "soil_erosion_rate_t_ha_yr": 15.0,
+        "description": "Industrial row crops with intensive pesticide and synthetic nitrogen application",
+        "source": "IPBES Global Assessment Report (2019)"
+      },
+      "intercropping_cereal_legume": {
+        "biodiversity_score": 0.58,
+        "habitat_fragmentation_risk": "Moderate",
+        "pollinator_support": "Moderate-High (continuous bloom periods, nectar source)",
+        "soil_erosion_rate_t_ha_yr": 6.2,
+        "nitrogen_fixation_kg_ha": "40-90 kg biological N fixed annually",
+        "description": "Simultaneous cultivation of cereal with nitrogen-fixing pulses/legumes",
+        "source": "FAO Conservation Agriculture Guidelines; Lithourgidis et al. (2011)"
+      },
+      "agroforestry_alley_cropping": {
+        "biodiversity_score": 0.82,
+        "habitat_fragmentation_risk": "Low (acts as biological corridor)",
+        "pollinator_support": "High (>45 visits/m²/hr from wild pollinators)",
+        "soil_erosion_rate_t_ha_yr": 2.1,
+        "soc_accumulation_rate": "+0.3% to +0.6% organic carbon per decade",
+        "description": "Multi-strata perennial woody hedgerows integrated with annual crops",
+        "source": "IPCC AR6 WGIII Ch. 7 Agriculture, Forestry and Other Land Uses (AFOLU)"
+      },
+      "silvopasture": {
+        "biodiversity_score": 0.74,
+        "habitat_fragmentation_risk": "Low-Moderate",
+        "pollinator_support": "High",
+        "soil_erosion_rate_t_ha_yr": 3.4,
+        "description": "Deliberate integration of trees, forage legumes, and grazing livestock",
+        "source": "USDA National Agroforestry Center; FAO (2021)"
+      },
+      "native_forest_woodland": {
+        "biodiversity_score": 0.96,
+        "habitat_fragmentation_risk": "Minimal (core ecological refuge)",
+        "pollinator_support": "Apex (native solitary bees, lepidoptera, syrphid flies)",
+        "soil_erosion_rate_t_ha_yr": 0.4,
+        "description": "Multi-tiered native climax canopy and mycorrhizal fungal network",
+        "source": "IPBES Global Assessment (2019)"
+      }
+    },
+    "climate_zones": {
+      "arid": {
+        "annual_rainfall_mm": "< 250",
+        "evapotranspiration_ratio": "< 0.2",
+        "vulnerability": "Extreme drought risk, biological crust sensitivity",
+        "key_intervention": "Drought-resilient nitrogen-fixing shrubs (Acacia, Prosopis cineraria), micro-catchment water harvesting",
+        "source": "FAO Arid Zone Forestry; UNCCD Land Degradation Neutrality"
+      },
+      "semi-arid": {
+        "annual_rainfall_mm": "250 - 500",
+        "evapotranspiration_ratio": "0.2 - 0.5",
+        "vulnerability": "Prone to desertification upon bare fallow tillage and heavy machinery compaction",
+        "key_intervention": "Agroforestry windbreaks, legume cover crops (Vicia villosa), minimum tillage, organic mulching",
+        "source": "IPCC AR6 WGII Land and Water Systems (2022)"
+      },
+      "sub_humid": {
+        "annual_rainfall_mm": "500 - 1000",
+        "evapotranspiration_ratio": "0.5 - 0.75",
+        "vulnerability": "Runoff erosion on slopes, nutrient leaching in coarse soils",
+        "key_intervention": "Contour hedgerows, perennial grass strips, multi-species cover cropping",
+        "source": "FAO Soils Bulletin 80"
+      },
+      "humid_tropical": {
+        "annual_rainfall_mm": "> 1000",
+        "evapotranspiration_ratio": "> 0.75",
+        "vulnerability": "Rapid organic matter oxidation, phosphorus fixation in oxisols/ultisols",
+        "key_intervention": "Multi-canopy shaded agroforestry (Cacao/Coffee + Inga edulis), biochar amendments",
+        "source": "CIFOR Agroforestry and Biodiversity Conservation"
+      }
+    },
+    "biodiversity_indicators": {
+      "shannon_wiener_index": {
+        "critical_depleted": { "max": 1.2, "evaluation": "Severe monoculture depression; dominant single invasive/pest species", "source": "Magurran Ecological Diversity (2004)" },
+        "moderate": { "min": 1.2, "max": 2.5, "evaluation": "Fragmented functional diversity with missing pollinator/predator guilds", "source": "IPBES (2019)" },
+        "high": { "min": 2.5, "evaluation": "Resilient trophic web with balanced predator-prey and pollinator dynamics", "source": "Garibaldi et al. Science (2016)" }
+      },
+      "pollinator_activity_proxy": {
+        "depleted": { "value": "< 10 visits/100m² transect/hour", "impact": "Pollination deficit in entomophilous crops (-20% yield gap)", "source": "FAO Pollination Services (2018)" },
+        "viable": { "value": "> 50 visits/100m² transect/hour", "impact": "High fruit set, genetic flow, and native wild bee sustenance", "source": "IPBES Pollinators, Pollination and Food Production (2016)" }
+      }
+    },
+    "human_impact_metrics": {
+      "pesticide_intensity": {
+        "high_hazard": { "min": 3.5, "unit": "kg a.i./ha/yr", "effect": "Non-target mortality of apifauna, soil nematode suppression, aquatic runoff toxicity", "source": "FAOSTAT Agri-environmental Indicators" },
+        "integrated_pest_mgmt": { "max": 1.0, "unit": "kg a.i./ha/yr", "effect": "Preserves parasitoid wasps and ground beetles as natural biocontrol agents", "source": "FAO Guidance on Pest and Pesticide Management" }
+      },
+      "deforestation_fragmentation": {
+        "critical_isolation": { "value": "> 500m distance to nearest ecological corridor", "effect": "Severe genetic bottlenecks for flightless arthropods and small mammals", "source": "Haddad et al. Science Advances (2015)" }
+      }
+    }
+  }
+}

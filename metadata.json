@@ -1,0 +1,6 @@
+{
+  "name": "Darukaa.Earth AI Biodiversity Intelligence",
+  "description": "AI Environmental Scientist system with hybrid RAG knowledge base, multi-metric causal reasoning, and evidence-backed ecological recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
